@@ -78,6 +78,7 @@ main .box {
 	grid-row: 5;
 	grid-column: 1;
 	border: 1px solid black;
+	opacity: 1;
 }
 
 #box9 {

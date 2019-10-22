@@ -50,13 +50,14 @@ startB.addEventListener("click", function(evt) {
 		evt.preventDefault();
 		console.log(evt);
 		console.log("You clicked Start.") //figure out how to change which start function to use
-
 		startRound() 
-		// startRound2()
-		// startRound3()
-		// startRound4()
-		// startRound5()
+		startB.style.opacity = 0;
+		startB.removeEventListener("click", arguments.callee);
 })
+
+// startB.removeEventListener("click", function(evt) {
+// 			evt.preventDefault();
+// 		});
 
 submitB.addEventListener("click", function(evt) {
 		evt.preventDefault();
