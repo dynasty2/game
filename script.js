@@ -60,7 +60,7 @@ const answers = [
 ["San Diego Dynasty", "Sacremento XSV", "Seattle Thunder", "Baltimore Revo"],
 ["2010", "2013", "2019", "2005"],
 ["Tippmann 98-Custom", "Planet Eclipse Etek5", "Spyder Fenix", "Empire Axe"]
-
+]
 
 const questionContent = document.querySelector(".question")
 const round = 0;
