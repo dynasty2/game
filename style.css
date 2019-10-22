@@ -85,6 +85,16 @@ main .box {
 	text-align: center;
 	font-size: 45px;
 }
+
+h2 {
+	text-align: center;
+	font-size: 30px;
+}
+
+h4 {
+	text-align: center;
+	font-size: 25px;
+}
 /*#box9 {
 	grid-row: 4;
 	grid-column: 4;
