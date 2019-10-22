@@ -33,6 +33,7 @@ box7.addEventListener("click", function(evt) {
 		evt.preventDefault();
 		console.log(evt);
 		console.log("You clicked Start.")
+		startRound()
 })
 
 box8.addEventListener("click", function(evt) {
@@ -49,3 +50,9 @@ const answers = [
 ["San Diego Dynasty", "Houston Heat", "Moscow Red Legion", "San Antonio X-Factor"]
 ]
 
+const questionContent = document.querySelector(".question")
+
+function startRound() {
+	for (let i = 0; i < questions.length; i++)
+		questionContent.innerText = questions[i]
+}
