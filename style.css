@@ -44,21 +44,25 @@ main .box {
 	grid-row: 3;
 	grid-column: 1 / span 2;
 	border: 1px solid black;
+	background: white;
 }
 #box3 {
 	grid-row: 3; 
 	grid-column: 3 / span 2;
 	border: 1px solid black;
+	background: white;
 }
 #box4 {
 	grid-row: 4;
 	grid-column: 1 / span 2;
 	border: 1px solid black;
+	background: white;
 }
 #box5 {
 	grid-row: 4;
 	grid-column: 3 / span 2;
 	border: 1px solid black;
+	background: white;
 }
 #box6 {
 	grid-row: 2;

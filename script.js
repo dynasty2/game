@@ -10,24 +10,40 @@ box2.addEventListener("click", function(evt) {
 		evt.preventDefault();
 		console.log(evt);
 		console.log("You clicked box 2.")
+		box2.style.background = "tan";
+		box3.style.background = "white";
+		box4.style.background = "white";
+		box5.style.background = "white";
 })
 
 box3.addEventListener("click", function(evt) {
 		evt.preventDefault();
 		console.log(evt);
 		console.log("You clicked box 3.")
+		box3.style.background = "tan";
+		box2.style.background = "white";
+		box4.style.background = "white";
+		box5.style.background = "white";
 })
 
 box4.addEventListener("click", function(evt) {
 		evt.preventDefault();
 		console.log(evt);
 		console.log("You clicked box 4.")
+		box4.style.background = "tan";
+		box5.style.background = "white";
+		box2.style.background = "white";
+		box3.style.background = "white";
 })
 
 box5.addEventListener("click", function(evt) {
 		evt.preventDefault();
 		console.log(evt);
 		console.log("You clicked box 5.")
+		box5.style.background = "tan";
+		box2.style.background = "white";
+		box3.style.background = "white";
+		box4.style.background = "white";
 })
 
 startB.addEventListener("click", function(evt) {
@@ -62,6 +78,7 @@ nextB.addEventListener("click", function(evt) {
 		console.log("You clicked Next.")
 		next()
 })
+
 
 //Array for questions.
 const questions = ["Which professional National Xball League team won the 2015 World Cup?", 
