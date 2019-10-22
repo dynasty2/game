@@ -60,6 +60,7 @@ nextB.addEventListener("click", function(evt) {
 		evt.preventDefault();
 		console.log(evt);
 		console.log("You clicked Next.")
+		next()
 })
 
 //Array for questions.
@@ -97,7 +98,11 @@ function startRound() {
 	option1.innerText = answers[0][0];
 	option2.innerText = answers[0][1];
 	option3.innerText = answers[0][2];
-	option4.innerText = answers[0][3];	
+	option4.innerText = answers[0][3];
+	// option1 = true;
+	// option2 = false;
+	// option3 = false;
+	// option4 = false;	
 }
 		
 function next() {
@@ -105,7 +110,11 @@ function next() {
 	option1.innerText = answers[1][0];
 	option2.innerText = answers[1][1];
 	option3.innerText = answers[1][2];
-	option4.innerText = answers[1][3];	
+	option4.innerText = answers[1][3];
+	// option1 = true;
+	// option2 = false;
+	// option3 = false;
+	// option4 = false;	
 }
 
 function next2() {
@@ -113,7 +122,11 @@ function next2() {
 	option1.innerText = answers[2][0];
 	option2.innerText = answers[2][1];
 	option3.innerText = answers[2][2];
-	option4.innerText = answers[2][3];	
+	option4.innerText = answers[2][3];
+	// option1 = true;
+	// option2 = false;
+	// option3 = false;
+	// option4 = false;	
 }
 
 function next3() {
@@ -121,7 +134,11 @@ function next3() {
 	option1.innerText = answers[3][0];
 	option2.innerText = answers[3][1];
 	option3.innerText = answers[3][2];
-	option4.innerText = answers[3][3];	
+	option4.innerText = answers[3][3];
+	// option1 = true;
+	// option2 = false;
+	// option3 = false;
+	// option4 = false;	
 }
 
 function next4() {
@@ -129,7 +146,11 @@ function next4() {
 	option1.innerText = answers[4][0];
 	option2.innerText = answers[4][1];
 	option3.innerText = answers[4][2];
-	option4.innerText = answers[4][3];	
+	option4.innerText = answers[4][3];
+	// option1 = true;
+	// option2 = false;
+	// option3 = false;
+	// option4 = false;	
 }
 
 
@@ -138,50 +159,11 @@ const update  = document.querySelector(".update");
 const score = document.querySelector(".score")
 
 function whatHappened() {
-	update.innerText = "wrong or Correct!"
+	update.innerText = "Wrong or Correct!"
 	score.innerText = "Points!"
 }
 
-// const startFunctions = [
-// function startRound() { 
-// 	[questionContent.innerText = questions[0];
-// 	option1.innerText = answers[0][0];
-// 	option2.innerText = answers[0][1];
-// 	option3.innerText = answers[0][2];
-// 	option4.innerText = answers[0][3];	
-// },
-		
-// function startRound2() {
-// 	questionContent.innerText = questions[1];
-// 	option1.innerText = answers[1][0];
-// 	option2.innerText = answers[1][1];
-// 	option3.innerText = answers[1][2];
-// 	option4.innerText = answers[1][3];	
-// },
-
-// function startRound3() {
-// 	questionContent.innerText = questions[2];
-// 	option1.innerText = answers[2][0];
-// 	option2.innerText = answers[2][1];
-// 	option3.innerText = answers[2][2];
-// 	option4.innerText = answers[2][3];	
-// },
-
-// function startRound4() {
-// 	questionContent.innerText = questions[3];
-// 	option1.innerText = answers[3][0];
-// 	option2.innerText = answers[3][1];
-// 	option3.innerText = answers[3][2];
-// 	option4.innerText = answers[3][3];	
-// },
-
-// function startRound5() {
-// 	questionContent.innerText = questions[4];
-// 	option1.innerText = answers[4][0];
-// 	option2.innerText = answers[4][1];
-// 	option3.innerText = answers[4][2];
-// 	option4.innerText = answers[4][3];	
+// function whatHappened() {
+// 	update.innerText = "Wrong or Correct!"
+// 	score.innerText = "Points!"
 // }
-// ]
-
-
