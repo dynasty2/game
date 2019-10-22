@@ -2,8 +2,9 @@ const box2 = document.querySelector("#box2")
 const box3 = document.querySelector("#box3")
 const box4 = document.querySelector("#box4")
 const box5 = document.querySelector("#box5")
-const start = document.querySelector("#box7")
-const submit =document.querySelector("#box8")
+const startB = document.querySelector("#box8")
+const submitB = document.querySelector("#box9")
+const nextB = document.querySelector("#box10")
 
 box2.addEventListener("click", function(evt) {
 		evt.preventDefault();
@@ -29,22 +30,22 @@ box5.addEventListener("click", function(evt) {
 		console.log("You clicked box 5.")
 })
 
-box7.addEventListener("click", function(evt) {
+startB.addEventListener("click", function(evt) {
 		evt.preventDefault();
 		console.log(evt);
 		console.log("You clicked Start.") //figure out how to change which start function to use
 
-		// startRound() 
+		startRound() 
 		// startRound2()
 		// startRound3()
 		// startRound4()
 		// startRound5()
 })
 
-box8.addEventListener("click", function(evt) {
+submitB.addEventListener("click", function(evt) {
 		evt.preventDefault();
 		console.log(evt);
-		console.log("You clicked box Submit.") //need to figure out how to grade answers
+		console.log("You clicked Submit.") //need to figure out how to grade answers
 		whatHappened()
 
 
@@ -53,6 +54,12 @@ box8.addEventListener("click", function(evt) {
 		// } else { 
 		// 	console.log("Correct!")
 		// }
+})
+
+nextB.addEventListener("click", function(evt) {
+		evt.preventDefault();
+		console.log(evt);
+		console.log("You clicked Next.")
 })
 
 //Array for questions.
@@ -85,56 +92,96 @@ const round = 0;
 // Ideally Start just starts and submit will just show the score.  
 // Should I make a 'next' button?
 
-const startFunctions = [
 function startRound() { 
-	[questionContent.innerText = questions[0];
+	questionContent.innerText = questions[0];
 	option1.innerText = answers[0][0];
 	option2.innerText = answers[0][1];
 	option3.innerText = answers[0][2];
 	option4.innerText = answers[0][3];	
-},
+}
 		
-function startRound2() {
+function next() {
 	questionContent.innerText = questions[1];
 	option1.innerText = answers[1][0];
 	option2.innerText = answers[1][1];
 	option3.innerText = answers[1][2];
 	option4.innerText = answers[1][3];	
-},
+}
 
-function startRound3() {
+function next2() {
 	questionContent.innerText = questions[2];
 	option1.innerText = answers[2][0];
 	option2.innerText = answers[2][1];
 	option3.innerText = answers[2][2];
 	option4.innerText = answers[2][3];	
-},
+}
 
-function startRound4() {
+function next3() {
 	questionContent.innerText = questions[3];
 	option1.innerText = answers[3][0];
 	option2.innerText = answers[3][1];
 	option3.innerText = answers[3][2];
 	option4.innerText = answers[3][3];	
-},
+}
 
-function startRound5() {
+function next4() {
 	questionContent.innerText = questions[4];
 	option1.innerText = answers[4][0];
 	option2.innerText = answers[4][1];
 	option3.innerText = answers[4][2];
 	option4.innerText = answers[4][3];	
 }
-]
 
 
-const score  = document.querySelector(".score");
+
+const update  = document.querySelector(".update");
+const score = document.querySelector(".score")
 
 function whatHappened() {
-	score.innerText = "(wrong.) or (Correct!). Your score is (points)."
+	update.innerText = "wrong or Correct!"
+	score.innerText = "Points!"
 }
 
+// const startFunctions = [
+// function startRound() { 
+// 	[questionContent.innerText = questions[0];
+// 	option1.innerText = answers[0][0];
+// 	option2.innerText = answers[0][1];
+// 	option3.innerText = answers[0][2];
+// 	option4.innerText = answers[0][3];	
+// },
+		
+// function startRound2() {
+// 	questionContent.innerText = questions[1];
+// 	option1.innerText = answers[1][0];
+// 	option2.innerText = answers[1][1];
+// 	option3.innerText = answers[1][2];
+// 	option4.innerText = answers[1][3];	
+// },
 
+// function startRound3() {
+// 	questionContent.innerText = questions[2];
+// 	option1.innerText = answers[2][0];
+// 	option2.innerText = answers[2][1];
+// 	option3.innerText = answers[2][2];
+// 	option4.innerText = answers[2][3];	
+// },
 
+// function startRound4() {
+// 	questionContent.innerText = questions[3];
+// 	option1.innerText = answers[3][0];
+// 	option2.innerText = answers[3][1];
+// 	option3.innerText = answers[3][2];
+// 	option4.innerText = answers[3][3];	
+// },
+
+// function startRound5() {
+// 	questionContent.innerText = questions[4];
+// 	option1.innerText = answers[4][0];
+// 	option2.innerText = answers[4][1];
+// 	option3.innerText = answers[4][2];
+// 	option4.innerText = answers[4][3];	
+// }
+// ]
 
 
