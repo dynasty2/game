@@ -76,7 +76,12 @@ nextB.addEventListener("click", function(evt) {
 		evt.preventDefault();
 		console.log(evt);
 		console.log("You clicked Next.")
+		box2.style.background = "white";
+		box3.style.background = "white";
+		box4.style.background = "white";
+		box5.style.background = "white";
 		next()
+
 })
 
 
@@ -102,7 +107,7 @@ const option1 = document.querySelector("#option1");
 const option2 = document.querySelector("#option2");
 const option3 = document.querySelector("#option3");
 const option4 = document.querySelector("#option4");
-const round = 0;
+let round = 0;
 
 //These are the functions that allow the questions and corresponding answers to show once the 'start' button is pressed.
 //I have them seperated, but need to find a way to cycle throughout.
@@ -111,11 +116,12 @@ const round = 0;
 // Should I make a 'next' button?
 
 function startRound() { 
-	questionContent.innerText = questions[0];
-	option1.innerText = answers[0][0];
-	option2.innerText = answers[0][1];
-	option3.innerText = answers[0][2];
-	option4.innerText = answers[0][3];
+	questionContent.innerText = questions[round];
+	option1.innerText = answers[round][0];
+	option2.innerText = answers[round][1];
+	option3.innerText = answers[round][2];
+	option4.innerText = answers[round][3];
+	round++;
 	// option1 = true;
 	// option2 = false;
 	// option3 = false;
@@ -123,54 +129,17 @@ function startRound() {
 }
 		
 function next() {
-	questionContent.innerText = questions[1];
-	option1.innerText = answers[1][0];
-	option2.innerText = answers[1][1];
-	option3.innerText = answers[1][2];
-	option4.innerText = answers[1][3];
+	questionContent.innerText = questions[round];
+	option1.innerText = answers[round][0];
+	option2.innerText = answers[round][1];
+	option3.innerText = answers[round][2];
+	option4.innerText = answers[round][3];
+	round++;
 	// option1 = true;
 	// option2 = false;
 	// option3 = false;
 	// option4 = false;	
 }
-
-function next2() {
-	questionContent.innerText = questions[2];
-	option1.innerText = answers[2][0];
-	option2.innerText = answers[2][1];
-	option3.innerText = answers[2][2];
-	option4.innerText = answers[2][3];
-	// option1 = true;
-	// option2 = false;
-	// option3 = false;
-	// option4 = false;	
-}
-
-function next3() {
-	questionContent.innerText = questions[3];
-	option1.innerText = answers[3][0];
-	option2.innerText = answers[3][1];
-	option3.innerText = answers[3][2];
-	option4.innerText = answers[3][3];
-	// option1 = true;
-	// option2 = false;
-	// option3 = false;
-	// option4 = false;	
-}
-
-function next4() {
-	questionContent.innerText = questions[4];
-	option1.innerText = answers[4][0];
-	option2.innerText = answers[4][1];
-	option3.innerText = answers[4][2];
-	option4.innerText = answers[4][3];
-	// option1 = true;
-	// option2 = false;
-	// option3 = false;
-	// option4 = false;	
-}
-
-
 
 const update  = document.querySelector(".update");
 const score = document.querySelector(".score")
