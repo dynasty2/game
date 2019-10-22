@@ -26,3 +26,12 @@ box5.addEventListener("click", function(evt) {
 		console.log(evt);
 		console.log("You clicked box 5.")
 })
+
+const questions = [
+["Which professional National Xball League team won the 2015 World Cup?"]
+]
+
+const answers = [
+["San Diego Dynasty", "Houston Heat", "Moscow Red Legion", "San Antonio X-Factor"]
+]
+
