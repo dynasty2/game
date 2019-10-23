@@ -3,9 +3,36 @@ const box2 = document.querySelector("#box2")
 const box3 = document.querySelector("#box3")
 const box4 = document.querySelector("#box4")
 const box5 = document.querySelector("#box5")
+const questionContent = document.querySelector(".question");
+const option1 = document.querySelector("#option1");
+const option2 = document.querySelector("#option2");
+const option3 = document.querySelector("#option3");
+const option4 = document.querySelector("#option4");
+let round = 0; round < 6; 
 const startB = document.querySelector("#box8")
 const submitB = document.querySelector("#box9")
 const nextB = document.querySelector("#box10")
+const update  = document.querySelector(".update");
+const score = document.querySelector(".score")
+let scoreboard = 0;
+let selected;
+let correctAnswer;
+
+//Array for questions.
+const questions = ["Which professional National Xball League team won the 2015 World Cup?", 
+"Which team did Ollie Lang begin his professional career with?", 
+"What team was on the cover of the 2009 PlayStation 2 NPPL video game?", 
+"In what year did San Diego Dynasty and Edmonton Impact combine their rosters to create the team known as Dynapact?",
+"What is the most sold paintball marker of all time?"];
+
+//Array for answers (wrong and right)
+const answers = [
+["San Diego Dynasty", "Houston Heat", "Moscow Red Legion", "San Antonio X-Factor"],
+["Los Angeles IronMen", "San Diego Dynasty", "Philly All-Americans", "Tampa-Bay Damage"],
+["San Diego Dynasty", "Sacremento XSV", "Seattle Thunder", "Baltimore Revo"],
+["2010", "2013", "2019", "2005"],
+["Tippmann 98-Custom", "Planet Eclipse Etek5", "Spyder Fenix", "Empire Axe"]
+]
 
 box2.addEventListener("click", function(evt) {
 		evt.preventDefault();
@@ -57,6 +84,16 @@ startB.addEventListener("click", function(evt) {
 		startB.removeEventListener("click", arguments.callee);
 })
 
+function startRound() { 
+	questionContent.innerText = questions[round];
+	option1.innerText = answers[round][0];
+	option2.innerText = answers[round][1];
+	option3.innerText = answers[round][2];
+	option4.innerText = answers[round][3];
+	round++;
+	nextB.style.opacity = 1;
+}
+
 
 submitB.addEventListener("click", function(evt) {
 		evt.preventDefault();
@@ -67,71 +104,47 @@ submitB.addEventListener("click", function(evt) {
 		box4.style.background = "white";
 		box5.style.background = "white";
 		whatHappened()
-
-
-		// if (wrong) {
-		// 	console.log("Wrong answer. Better luck next time.")
-		// } else { 
-		// 	console.log("Correct!")
-		// }
 })
+
+function whatHappened() {
+	console.log("whatHappened() was called.")
+for (let i = 0; i < box.length; i++) {
+	if (box[i].style.background === 'tan') {
+		selected = box[i];
+		}
+	}
+	answer()
+}
+
+function answer() {
+	console.log("answer() was called.")
+ 	if (round = 1) {
+		correctAnswer === box[1]
+	} 
+	// console.log("answer() was called AGAIN.")
+	grade()
+}
+
+function grade() {
+	console.log("grade() was called.")
+	if (selected === correctAnswer) {
+    	update.innerText = ("That's right!")
+    	scoreboard++ 
+  } else {
+    	update.innerText = ("better luck on next one!")
+  }
+}
 
 nextB.addEventListener("click", function(evt) {
 		evt.preventDefault();
 		console.log(evt);
 		console.log("You clicked Next.")
-		// box2.style.background = "white";
-		// box3.style.background = "white";
-		// box4.style.background = "white";
-		// box5.style.background = "white";
 		next()
 		// if (round > 4) {
 		// 	nextB.removeEventListener("click", arguments.callee);
 		// }
-
 })
 
-
-//Array for questions.
-const questions = ["Which professional National Xball League team won the 2015 World Cup?", 
-"Which team did Ollie Lang begin his professional career with?", 
-"What team was on the cover of the 2009 PlayStation 2 NPPL video game?", 
-"In what year did San Diego Dynasty and Edmonton Impact combine their rosters to create the team known as Dynapact?",
-"What is the most sold paintball marker of all time?"];
-
-//Array for answers (wrong and right)
-const answers = [
-["San Diego Dynasty", "Houston Heat", "Moscow Red Legion", "San Antonio X-Factor"],
-["Los Angeles IronMen", "San Diego Dynasty", "Philly All-Americans", "Tampa-Bay Damage"],
-["San Diego Dynasty", "Sacremento XSV", "Seattle Thunder", "Baltimore Revo"],
-["2010", "2013", "2019", "2005"],
-["Tippmann 98-Custom", "Planet Eclipse Etek5", "Spyder Fenix", "Empire Axe"]
-]
-
-//these variables reference the boxes which will show the questions and answers
-const questionContent = document.querySelector(".question");
-const option1 = document.querySelector("#option1");
-const option2 = document.querySelector("#option2");
-const option3 = document.querySelector("#option3");
-const option4 = document.querySelector("#option4");
-let round = 0; round < 6; 
-
-//These are the functions that allow the questions and corresponding answers to show once the 'start' button is pressed.
-//I have them seperated, but need to find a way to cycle throughout.
-// Can I keep them in an array like this? And access them one at a time?
-// Ideally Start just starts and submit will just show the score.  
-// Should I make a 'next' button?
-
-function startRound() { 
-	questionContent.innerText = questions[round];
-	option1.innerText = answers[round][0];
-	option2.innerText = answers[round][1];
-	option3.innerText = answers[round][2];
-	option4.innerText = answers[round][3];
-	round++;
-	nextB.style.opacity = 1;
-}
-		
 function next() { 
   box2.style.background = "white";
   box3.style.background = "white";
@@ -169,62 +182,4 @@ function end() {
 
 }
 
-const update  = document.querySelector(".update");
-const score = document.querySelector(".score")
-let scoreboard = 0;
-let selected;
-let correctAnswer;
 
-// function whatHappened() {
-// for (let i = 0; i < box.length; i++) {
-// 	if (box[i].style.background === 'tan') {
-// 		selected = box[i];
-// 	}
-// 	getScore()
-// }
-// }
-// function getScore() {
-// //selected = box[i].style.background = "tan";
-// if (round = 1) {
-// 	correctAnswer = box[1]
-// }
-// if (selected == correctAnswer) {
-//     update.innerText = ("That's right!")
-//     scoreboard++ //this will increase score by 1 each time
-//   } else {
-//     update.innerText = ("better luck on next one!")
-//   }
-// }
-
-function whatHappened() {
-for (let i = 0; i < box.length; i++) {
-	if (box[i].style.background === 'tan') {
-		selected = box[i];
-	}
-}
-//selected = box[i].style.background = "tan";
-if (round = 0) {
-	correctAnswer = box[1]
-}
-if (selected == correctAnswer) {
-    update.innerText = ("That's right!")
-    scoreboard++ 
-  } else {
-    update.innerText = ("better luck on next one!")
-  }
-}
-
-// function whatHappened() {
-	// if () {
-	// update.innerText = "Correct!"
-	// score.innerText = "10 Points!"
-	// 	} else { 
-	// 		update.innerText = "Wrong :("
-	// 		score.innerText = "0 Points."
-	// }
-// }
-
-// function whatHappened() {
-// 	update.innerText = "Wrong or Correct!"
-// 	score.innerText = "Points!"
-// }
