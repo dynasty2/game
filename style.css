@@ -91,6 +91,7 @@ main .box {
 	grid-row: 5;
 	grid-column: 5;
 	border: 1px solid black;
+	opacity: 0;
 }
 
 .start {

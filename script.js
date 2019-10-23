@@ -52,6 +52,7 @@ startB.addEventListener("click", function(evt) {
 		console.log("You clicked Start.") //figure out how to change which start function to use
 		startRound() 
 		startB.style.opacity = 0;
+		nextB.style.opacity = 1;
 		startB.removeEventListener("click", arguments.callee);
 })
 
