@@ -82,6 +82,9 @@ nextB.addEventListener("click", function(evt) {
 		box4.style.background = "white";
 		box5.style.background = "white";
 		next()
+		// if (round > 4) {
+		// 	nextB.removeEventListener("click", arguments.callee);
+		// }
 
 })
 
@@ -123,26 +126,19 @@ function startRound() {
 	option3.innerText = answers[round][2];
 	option4.innerText = answers[round][3];
 	round++;
-	// option1 = true;
-	// option2 = false;
-	// option3 = false;
-	// option4 = false;	
+	nextB.style.opacity = 1;
 }
 		
-function next() {
+function next() { 
 	questionContent.innerText = questions[round];
 	option1.innerText = answers[round][0];
 	option2.innerText = answers[round][1];
 	option3.innerText = answers[round][2];
-	option4.innerText = answers[round][3];
+	option4.innerText = answers[round][3]; 
 	round++;
-	if (round === 5) { 
-		end();
+	if (round === 5) {
+		end()
 	}
-	// option1 = true;
-	// option2 = false;
-	// option3 = false;
-	// option4 = false;	
 }
 
 function end() {
@@ -152,15 +148,30 @@ function end() {
 	option3.innerText = "";
 	option4.innerText = "";
 	round = 0;
-	startB.style.opacity = 1;
-	startB.addEventListener("click", function(evt) {
-		evt.preventDefault();
-		console.log(evt);
-		console.log("You clicked Start.") //figure out how to change which start function to use
-		startRound() 
-		startB.removeEventListener("click", arguments.callee);
-		startB.style.opacity = 0;
+	nextB.style.opacity = 0;
+		startB.style.opacity = 1;
+		startB.addEventListener("click", function(evt) {
+			evt.preventDefault();
+			console.log(evt);
+			console.log("You clicked Start.") //figure out how to change which start function to use
+			startRound() 
+			startB.removeEventListener("click", arguments.callee);
+			startB.style.opacity = 0;
 })
+
+
+// nextB.addEventListener("click", function(evt) {
+// 		evt.preventDefault();
+// 		console.log(evt);
+// 		console.log("You clicked Next.")
+// 		box2.style.background = "white";
+// 		box3.style.background = "white";
+// 		box4.style.background = "white";
+// 		box5.style.background = "white";
+// 		next()
+
+// })
+
 
 }
 
