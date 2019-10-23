@@ -153,8 +153,9 @@ function grade(s, cA) {
 	if (s === cA) {
     	update.innerText = ("That's right!")
     	scoreboard++ 
+    	score.innerText = scoreboard
   } else {
-    	update.innerText = ("better luck on next one!")
+    	update.innerText = ("Wrong :(")
   }
   		box2.style.background = "white"; //checking to see if these work here.
 		box3.style.background = "white";
