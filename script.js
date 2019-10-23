@@ -93,6 +93,7 @@ function startRound() {
 	round++;
 	submitB.style.opacity = 1;
 	nextB.style.opacity = 1;
+	score.innerText = "0"
 }
 
 
@@ -199,6 +200,8 @@ function end() {
 	round = 0;
 	nextB.style.opacity = 0;
 	submitB.style.opacity = 0;
+	scoreboard = 0
+	score.innerText = "0"
 		startB.style.opacity = 1;
 		startB.addEventListener("click", function(evt) {
 			evt.preventDefault();
