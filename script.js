@@ -91,6 +91,7 @@ function startRound() {
 	option3.innerText = answers[round][2];
 	option4.innerText = answers[round][3];
 	round++;
+	submitB.style.opacity = 1;
 	nextB.style.opacity = 1;
 }
 
@@ -105,98 +106,6 @@ submitB.addEventListener("click", function(evt) {
 		// box5.style.background = "white";
 		whatHappened()
 })
-
-// every option submits as right. not correct.
-
-// function whatHappened() {
-// 	console.log("whatHappened() was called.")
-// for (let i = 0; i < answerBox.length; i++) {
-// 	if (answerBox[i].style.background === 'tan') {
-// 		selected = answerBox[i];
-// 		}
-// 	}
-// 	answer(selected)
-// }
-
-// function answer(selected) { //sel?
-// 	console.log("answer() was called.")
-//  	if (round === 1) {
-// 		correctAnswer === answerBox[0]
-// 	} 
-// 	// console.log("answer() was called AGAIN.")
-// 	grade(selected,correctAnswer)
-// }
-
-// function grade(selected,correctAnswer) {
-// 	console.log("grade() was called.")
-// 	if (selected === correctAnswer) {
-//     	update.innerText = ("That's right!")
-//     	scoreboard++ 
-//   } else {
-//     	update.innerText = ("better luck on next one!")
-//   }
-//   		box2.style.background = "white"; //checking to see if these work here.
-// 		box3.style.background = "white";
-// 		box4.style.background = "white";
-// 		box5.style.background = "white";
-// }
-
-nextB.addEventListener("click", function(evt) {
-		evt.preventDefault();
-		console.log(evt);
-		console.log("You clicked Next.")
-		next()
-		// if (round > 4) {
-		// 	nextB.removeEventListener("click", arguments.callee);
-		// }
-})
-
-function next() { 
-  box2.style.background = "white";
-  box3.style.background = "white";
-  box4.style.background = "white";
-  box5.style.background = "white";
-	questionContent.innerText = questions[round];
-	option1.innerText = answers[round][0];
-	option2.innerText = answers[round][1];
-	option3.innerText = answers[round][2];
-	option4.innerText = answers[round][3]; 
-	update.innerText = "";
-	round++;
-	if (round === 5) {
-		end()
-	}
-}
-
-function end() {
-	questionContent.innerText = "Good work. Try again?"
-	option1.innerText = "";
-	option2.innerText = "";
-	option3.innerText = "";
-	option4.innerText = "";
-	round = 0;
-	nextB.style.opacity = 0;
-		startB.style.opacity = 1;
-		startB.addEventListener("click", function(evt) {
-			evt.preventDefault();
-			console.log(evt);
-			console.log("You clicked Start.") //figure out how to change which start function to use
-			startRound() 
-			startB.removeEventListener("click", arguments.callee);
-			startB.style.opacity = 0;
-	})
-}
-
-function whatHappened() {
-	console.log("whatHappened() was called.")
-for (let i = 0; i < answerBox.length; i++) {
-	if (answerBox[i].style.background === 'tan') {
-		selected = answerBox[i];
-		}
-	}
-	//console.log(selected);
-	answer(selected)
-}
 
 function answer(sel) { //sel?
 	console.log("answer() was called.")
@@ -241,6 +150,61 @@ function grade(s, cA) {
 		box5.style.background = "white";
 }
 
+nextB.addEventListener("click", function(evt) {
+		evt.preventDefault();
+		console.log(evt);
+		console.log("You clicked Next.")
+		next()
+		// if (round > 4) {
+		// 	nextB.removeEventListener("click", arguments.callee);
+		// }
+})
 
+function next() { 
+  box2.style.background = "white";
+  box3.style.background = "white";
+  box4.style.background = "white";
+  box5.style.background = "white";
+	questionContent.innerText = questions[round];
+	option1.innerText = answers[round][0];
+	option2.innerText = answers[round][1];
+	option3.innerText = answers[round][2];
+	option4.innerText = answers[round][3]; 
+	update.innerText = "";
+	round++;
+	if (round === 5) {
+		end()
+	}
+}
 
+function end() {
+	questionContent.innerText = "Good work. Try again?"
+	option1.innerText = "";
+	option2.innerText = "";
+	option3.innerText = "";
+	option4.innerText = "";
+	round = 0;
+	nextB.style.opacity = 0;
+	submitB.style.opacity = 0;
+		startB.style.opacity = 1;
+		startB.addEventListener("click", function(evt) {
+			evt.preventDefault();
+			console.log(evt);
+			console.log("You clicked Start.") //figure out how to change which start function to use
+			startRound() 
+			startB.removeEventListener("click", arguments.callee);
+			startB.style.opacity = 0;
+	})
+}
+
+function whatHappened() {
+	console.log("whatHappened() was called.")
+for (let i = 0; i < answerBox.length; i++) {
+	if (answerBox[i].style.background === 'tan') {
+		selected = answerBox[i];
+		}
+	}
+	//console.log(selected);
+	answer(selected)
+}
 
