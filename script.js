@@ -64,6 +64,10 @@ submitB.addEventListener("click", function(evt) {
 		evt.preventDefault();
 		console.log(evt);
 		console.log("You clicked Submit.") //need to figure out how to grade answers
+		box2.style.background = "white";
+		box3.style.background = "white";
+		box4.style.background = "white";
+		box5.style.background = "white";
 		whatHappened()
 
 
