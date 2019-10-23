@@ -173,23 +173,42 @@ const update  = document.querySelector(".update");
 const score = document.querySelector(".score")
 let scoreboard = 0;
 let selected;
+let correctAnswer;
+
+// function whatHappened() {
+// for (let i = 0; i < box.length; i++) {
+// 	if (box[i].style.background === 'tan') {
+// 		selected = box[i];
+// 	}
+// 	getScore()
+// }
+// }
+// function getScore() {
+// //selected = box[i].style.background = "tan";
+// if (round = 1) {
+// 	correctAnswer = box[1]
+// }
+// if (selected == correctAnswer) {
+//     update.innerText = ("That's right!")
+//     scoreboard++ //this will increase score by 1 each time
+//   } else {
+//     update.innerText = ("better luck on next one!")
+//   }
+// }
 
 function whatHappened() {
 for (let i = 0; i < box.length; i++) {
 	if (box[i].style.background === 'tan') {
 		selected = box[i];
 	}
-	getScore()
 }
-}
-function getScore() {
 //selected = box[i].style.background = "tan";
-if (round = 1) {
+if (round = 0) {
 	correctAnswer = box[1]
 }
 if (selected == correctAnswer) {
     update.innerText = ("That's right!")
-    scoreboard++ //this will increase score by 1 each time
+    scoreboard++ 
   } else {
     update.innerText = ("better luck on next one!")
   }
