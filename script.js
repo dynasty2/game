@@ -187,4 +187,60 @@ function end() {
 	})
 }
 
+function whatHappened() {
+	console.log("whatHappened() was called.")
+for (let i = 0; i < answerBox.length; i++) {
+	if (answerBox[i].style.background === 'tan') {
+		selected = answerBox[i];
+		}
+	}
+	//console.log(selected);
+	answer(selected)
+}
+
+function answer(sel) { //sel?
+	console.log("answer() was called.")
+ // 	if (round === 1) {
+	// 	correctAnswer = answerBox[0]
+	// } 
+	switch (round) {
+		case 1:
+			correctAnswer = answerBox[0]
+			break;
+		case 2: 
+			correctAnswer = answerBox[0]
+			break;
+		case 3:
+			correctAnswer = answerBox[0]
+			break;
+		case 4:
+			correctAnswer = answerBox[0]
+			break;
+		case 5:
+			correctAnswer = answerBox[0]
+		default:
+			alert('round number exceeded question amount')
+	}
+	// console.log("answer() was called AGAIN.")
+	console.log(sel);
+	console.log(correctAnswer);
+	grade(sel, correctAnswer)
+}
+
+function grade(s, cA) {
+	console.log("grade() was called.")
+	if (s === cA) {
+    	update.innerText = ("That's right!")
+    	scoreboard++ 
+  } else {
+    	update.innerText = ("better luck on next one!")
+  }
+  		box2.style.background = "white"; //checking to see if these work here.
+		box3.style.background = "white";
+		box4.style.background = "white";
+		box5.style.background = "white";
+}
+
+
+
 
