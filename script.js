@@ -1,8 +1,8 @@
-let box = document.querySelectorAll(".box")
 const box2 = document.querySelector("#box2")
 const box3 = document.querySelector("#box3")
 const box4 = document.querySelector("#box4")
 const box5 = document.querySelector("#box5")
+let answerBox = document.querySelectorAll(".box-for-answers")
 const questionContent = document.querySelector(".question");
 const option1 = document.querySelector("#option1");
 const option2 = document.querySelector("#option2");
@@ -99,41 +99,47 @@ submitB.addEventListener("click", function(evt) {
 		evt.preventDefault();
 		console.log(evt);
 		console.log("You clicked Submit.") //need to figure out how to grade answers
-		box2.style.background = "white";
-		box3.style.background = "white";
-		box4.style.background = "white";
-		box5.style.background = "white";
+		// box2.style.background = "white";
+		// box3.style.background = "white";
+		// box4.style.background = "white";
+		// box5.style.background = "white";
 		whatHappened()
 })
 
-function whatHappened() {
-	console.log("whatHappened() was called.")
-for (let i = 0; i < box.length; i++) {
-	if (box[i].style.background === 'tan') {
-		selected = box[i];
-		}
-	}
-	answer()
-}
+// every option submits as right. not correct.
 
-function answer() {
-	console.log("answer() was called.")
- 	if (round = 1) {
-		correctAnswer === box[1]
-	} 
-	// console.log("answer() was called AGAIN.")
-	grade()
-}
+// function whatHappened() {
+// 	console.log("whatHappened() was called.")
+// for (let i = 0; i < answerBox.length; i++) {
+// 	if (answerBox[i].style.background === 'tan') {
+// 		selected = answerBox[i];
+// 		}
+// 	}
+// 	answer(selected)
+// }
 
-function grade() {
-	console.log("grade() was called.")
-	if (selected === correctAnswer) {
-    	update.innerText = ("That's right!")
-    	scoreboard++ 
-  } else {
-    	update.innerText = ("better luck on next one!")
-  }
-}
+// function answer(selected) { //sel?
+// 	console.log("answer() was called.")
+//  	if (round === 1) {
+// 		correctAnswer === answerBox[0]
+// 	} 
+// 	// console.log("answer() was called AGAIN.")
+// 	grade(selected,correctAnswer)
+// }
+
+// function grade(selected,correctAnswer) {
+// 	console.log("grade() was called.")
+// 	if (selected === correctAnswer) {
+//     	update.innerText = ("That's right!")
+//     	scoreboard++ 
+//   } else {
+//     	update.innerText = ("better luck on next one!")
+//   }
+//   		box2.style.background = "white"; //checking to see if these work here.
+// 		box3.style.background = "white";
+// 		box4.style.background = "white";
+// 		box5.style.background = "white";
+// }
 
 nextB.addEventListener("click", function(evt) {
 		evt.preventDefault();
@@ -178,8 +184,7 @@ function end() {
 			startRound() 
 			startB.removeEventListener("click", arguments.callee);
 			startB.style.opacity = 0;
-})
-
+	})
 }
 
 
