@@ -1,3 +1,4 @@
+let box = document.querySelectorAll(".box")
 const box2 = document.querySelector("#box2")
 const box3 = document.querySelector("#box3")
 const box4 = document.querySelector("#box4")
@@ -56,9 +57,6 @@ startB.addEventListener("click", function(evt) {
 		startB.removeEventListener("click", arguments.callee);
 })
 
-// startB.removeEventListener("click", function(evt) {
-// 			evt.preventDefault();
-// 		});
 
 submitB.addEventListener("click", function(evt) {
 		evt.preventDefault();
@@ -82,10 +80,10 @@ nextB.addEventListener("click", function(evt) {
 		evt.preventDefault();
 		console.log(evt);
 		console.log("You clicked Next.")
-		box2.style.background = "white";
-		box3.style.background = "white";
-		box4.style.background = "white";
-		box5.style.background = "white";
+		// box2.style.background = "white";
+		// box3.style.background = "white";
+		// box4.style.background = "white";
+		// box5.style.background = "white";
 		next()
 		// if (round > 4) {
 		// 	nextB.removeEventListener("click", arguments.callee);
@@ -135,11 +133,16 @@ function startRound() {
 }
 		
 function next() { 
+  box2.style.background = "white";
+  box3.style.background = "white";
+  box4.style.background = "white";
+  box5.style.background = "white";
 	questionContent.innerText = questions[round];
 	option1.innerText = answers[round][0];
 	option2.innerText = answers[round][1];
 	option3.innerText = answers[round][2];
 	option4.innerText = answers[round][3]; 
+	update.innerText = "";
 	round++;
 	if (round === 5) {
 		end()
@@ -164,29 +167,43 @@ function end() {
 			startB.style.opacity = 0;
 })
 
-
-// nextB.addEventListener("click", function(evt) {
-// 		evt.preventDefault();
-// 		console.log(evt);
-// 		console.log("You clicked Next.")
-// 		box2.style.background = "white";
-// 		box3.style.background = "white";
-// 		box4.style.background = "white";
-// 		box5.style.background = "white";
-// 		next()
-
-// })
-
-
 }
 
 const update  = document.querySelector(".update");
 const score = document.querySelector(".score")
+let scoreboard = 0;
+let selected;
 
 function whatHappened() {
-	update.innerText = "Wrong or Correct!"
-	score.innerText = "Points!"
+for (let i = 0; i < box.length; i++) {
+	if (box[i].style.background === 'tan') {
+		selected = box[i];
+	}
+	getScore()
 }
+}
+function getScore() {
+//selected = box[i].style.background = "tan";
+if (round = 1) {
+	correctAnswer = box[1]
+}
+if (selected == correctAnswer) {
+    update.innerText = ("That's right!")
+    scoreboard++ //this will increase score by 1 each time
+  } else {
+    update.innerText = ("better luck on next one!")
+  }
+}
+
+// function whatHappened() {
+	// if () {
+	// update.innerText = "Correct!"
+	// score.innerText = "10 Points!"
+	// 	} else { 
+	// 		update.innerText = "Wrong :("
+	// 		score.innerText = "0 Points."
+	// }
+// }
 
 // function whatHappened() {
 // 	update.innerText = "Wrong or Correct!"
