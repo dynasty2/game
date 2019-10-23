@@ -100,12 +100,24 @@ submitB.addEventListener("click", function(evt) {
 		evt.preventDefault();
 		console.log(evt);
 		console.log("You clicked Submit.") //need to figure out how to grade answers
-		// box2.style.background = "white";
-		// box3.style.background = "white";
-		// box4.style.background = "white";
-		// box5.style.background = "white";
+	questionContent.innerText = "";
+	option1.innerText = "";
+	option2.innerText = "";
+	option3.innerText = "";
+	option4.innerText = "";
 		whatHappened()
 })
+
+function whatHappened() {
+	console.log("whatHappened() was called.")
+for (let i = 0; i < answerBox.length; i++) {
+	if (answerBox[i].style.background === 'tan') {
+		selected = answerBox[i];
+		}
+	}
+	//console.log(selected);
+	answer(selected)
+}
 
 function answer(sel) { //sel?
 	console.log("answer() was called.")
@@ -197,14 +209,4 @@ function end() {
 	})
 }
 
-function whatHappened() {
-	console.log("whatHappened() was called.")
-for (let i = 0; i < answerBox.length; i++) {
-	if (answerBox[i].style.background === 'tan') {
-		selected = answerBox[i];
-		}
-	}
-	//console.log(selected);
-	answer(selected)
-}
 
