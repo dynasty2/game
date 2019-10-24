@@ -18,6 +18,8 @@ let scoreboard = 0;
 let selected;
 let correctAnswer;
 
+questionContent.innerText = "Paintball Trivia!"
+
 //Array for questions.
 const questions = ["Which professional National Xball League team won the 2015 World Cup?", 
 "Which team did Ollie Lang begin his professional career with?", 
@@ -38,40 +40,40 @@ box2.addEventListener("click", function(evt) {
 		evt.preventDefault();
 		console.log(evt);
 		console.log("You clicked box 2.")
-		box2.style.background = "tan";
-		box3.style.background = "white";
-		box4.style.background = "white";
-		box5.style.background = "white";
+		box2.style.background = "white";
+		box3.style.background = "rgb(236,55,55)";
+		box4.style.background = "rgb(236,55,55)";
+		box5.style.background = "rgb(236,55,55)";
 })
 
 box3.addEventListener("click", function(evt) {
 		evt.preventDefault();
 		console.log(evt);
 		console.log("You clicked box 3.")
-		box3.style.background = "tan";
-		box2.style.background = "white";
-		box4.style.background = "white";
-		box5.style.background = "white";
+		box3.style.background = "white";
+		box2.style.background = "rgb(236,55,55)";
+		box4.style.background = "rgb(236,55,55)";
+		box5.style.background = "rgb(236,55,55)";
 })
 
 box4.addEventListener("click", function(evt) {
 		evt.preventDefault();
 		console.log(evt);
 		console.log("You clicked box 4.")
-		box4.style.background = "tan";
-		box5.style.background = "white";
-		box2.style.background = "white";
-		box3.style.background = "white";
+		box4.style.background = "white";
+		box5.style.background = "rgb(236,55,55)";
+		box2.style.background = "rgb(236,55,55)";
+		box3.style.background = "rgb(236,55,55)";
 })
 
 box5.addEventListener("click", function(evt) {
 		evt.preventDefault();
 		console.log(evt);
 		console.log("You clicked box 5.")
-		box5.style.background = "tan";
-		box2.style.background = "white";
-		box3.style.background = "white";
-		box4.style.background = "white";
+		box5.style.background = "white";
+		box2.style.background = "rgb(236,55,55)";
+		box3.style.background = "rgb(236,55,55)";
+		box4.style.background = "rgb(236,55,55)";
 })
 
 startB.addEventListener("click", function(evt) {
@@ -112,7 +114,7 @@ submitB.addEventListener("click", function(evt) {
 function whatHappened() {
 	console.log("whatHappened() was called.")
 for (let i = 0; i < answerBox.length; i++) {
-	if (answerBox[i].style.background === 'tan') {
+	if (answerBox[i].style.background === "white") {
 		selected = answerBox[i];
 		}
 	}
@@ -152,16 +154,16 @@ function answer(sel) { //sel?
 function grade(s, cA) {
 	console.log("grade() was called.")
 	if (s === cA) {
-    	update.innerText = ("That's right!")
+    	questionContent.innerText = ("That's right!")
     	scoreboard++ 
     	score.innerText = scoreboard
   } else {
-    	update.innerText = ("Wrong :(")
+    	questionContent.innerText = ("Wrong :(")
   }
-  		box2.style.background = "white"; //checking to see if these work here.
-		box3.style.background = "white";
-		box4.style.background = "white";
-		box5.style.background = "white";
+  		box2.style.background = "rgb(236,55,55)"; //checking to see if these work here.
+		box3.style.background = "rgb(236,55,55)";
+		box4.style.background = "rgb(236,55,55)";
+		box5.style.background = "rgb(236,55,55)";
 }
 
 nextB.addEventListener("click", function(evt) {
@@ -175,10 +177,10 @@ nextB.addEventListener("click", function(evt) {
 })
 
 function next() { 
-  box2.style.background = "white";
-  box3.style.background = "white";
-  box4.style.background = "white";
-  box5.style.background = "white";
+  box2.style.background = "rgb(236,55,55)";
+  box3.style.background = "rgb(236,55,55)";
+  box4.style.background = "rgb(236,55,55)";
+  box5.style.background = "rgb(236,55,55)";
 	questionContent.innerText = questions[round];
 	option1.innerText = answers[round][0];
 	option2.innerText = answers[round][1];

@@ -38,7 +38,7 @@ main .box {
 	grid-column: 1 / span 2;
 	border: 1px solid black;
 	border-radius: 40px;
-	background-color: rgba(236,55,55,1);
+	background-color: rgba(236,55,55,1); /*red*/
 	margin-bottom: 5px;
 }
 #box3 {
@@ -98,7 +98,7 @@ main .box {
 	border-right: 1px solid black;
 	border-bottom: 1px solid black;
 	border-left: 1px solid black;
-	background-color: rgba(139,153,173);
+	background-color: #1F65F1;
 	border-radius: 40px;
 	opacity: 1;
 }
@@ -110,7 +110,7 @@ main .box {
 	border-right: 1px solid black;
 	border-bottom: 1px solid black;
 	border-left: 1px solid black;
-	background-color: rgba(139,153,173);
+	background-color: #1F65F1;
 	border-radius: 40px;
 	opacity: 0;
 }
@@ -120,7 +120,7 @@ main .box {
 	grid-column: 5;
 	border: 1px solid black;
 	border-radius: 40px;
-	background-color: rgba(139,153,173);
+	background-color: #1F65F1;
 	opacity: 0;
 }
 
