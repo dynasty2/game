@@ -195,6 +195,7 @@ main .box {
 
 .score {
 	text-align: center;
+	transform: translate(0, 35%);
 }
 
 .next {
