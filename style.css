@@ -29,7 +29,7 @@ main .box {
 
 #box1 {
 	grid-row: 1;
-	grid-column: 1 / span 5;
+	grid-column: 1 / span 4;
 	background-color: rgba(255,255,255,0);
 	/*border: 1px solid black;*/
 }
@@ -84,7 +84,7 @@ main .box {
 	font-size: 30px;
 }
 #box7 {
-	grid-row: 4;
+	grid-row: 1;
 	grid-column: 5;
 	background-color: black;
 	border-right: 1px solid black;
@@ -125,13 +125,13 @@ main .box {
 }
 
 .imgBox {
-	margin-left: 40px;
+	margin-left: 20px;
 	margin-bottom: 20px;
 }
 
 #img1 {
 	grid-row: 2 / span 3;
-	grid-column: 3 / span 2;
+	grid-column: 3 / span 3;
 	background-image: url(https://i.imgur.com/89CgC26.jpg);
 	background-size: contain;
 	background-position: center;
@@ -141,9 +141,9 @@ main .box {
 
 #img2 {
 	grid-row: 2 / span 3;
-	grid-column: 3 / span 2;
+	grid-column: 3 / span 3;
 	background-image: url(https://i.imgur.com/Qi7wk3R.jpg);
-	background-size: cover;
+	background-size: contain;
 	background-position: center;
 	background-repeat: no-repeat;
 	opacity: 0;
@@ -151,7 +151,7 @@ main .box {
 
 #img3 {
 	grid-row: 2 / span 3;
-	grid-column: 3 / span 2;
+	grid-column: 3 / span 3;
 	background-image: url(https://i.imgur.com/4t2Y5GL.jpg);
 	background-size: auto auto;
 	background-position: center;
@@ -161,7 +161,7 @@ main .box {
 
 #img4 {
 	grid-row: 2 / span 3;
-	grid-column: 3 / span 2;
+	grid-column: 3 / span 3;
 	background-image: url(https://i.imgur.com/tCuEgR9.jpg);
 	background-size: cover;
 	background-position: center;
@@ -171,7 +171,7 @@ main .box {
 
 #img5 {
 	grid-row: 2 / span 3;
-	grid-column: 3 / span 2;
+	grid-column: 3 / span 3;
 	background-image: url(https://i.imgur.com/mHC2AGy.jpg);
 	background-size: contain;
 	background-position: center;
@@ -203,7 +203,7 @@ main .box {
 }
 
 h2 {
-	text-align: center;
+	text-align: left;
 	font-size: 30px;
 	color: white;
 }
