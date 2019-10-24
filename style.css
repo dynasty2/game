@@ -52,7 +52,9 @@ main .box {
 	border: 1px solid black;
 	border-radius: 40px;
 	background-color: rgba(236,55,55,1); /*red*/
+	margin-right: 10px;
 	margin-bottom: 5px;
+	margin-left: 10px;
 }
 #box3 {
 	grid-row: 3; 
@@ -63,7 +65,9 @@ main .box {
 	border-left: 1px solid black;*/
 	border-radius: 40px;
 	background-color: rgba(236,55,55,1);
+	margin-right: 10px;
 	margin-bottom: 5px;
+	margin-left: 10px;
 }
 #box4 {
 	grid-row: 4;
@@ -74,7 +78,9 @@ main .box {
 	border-top: 1px solid black;*/
 	border-radius: 40px;
 	background-color: rgba(236,55,55,1);
+	margin-right: 10px;
 	margin-bottom: 5px;
+	margin-left: 10px;
 }
 #box5 {
 	grid-row: 5;
@@ -85,16 +91,17 @@ main .box {
 	border-left: 1px solid black;*/
 	border-radius: 40px;
 	background-color: rgba(236,55,55,1);
-	margin-bottom: 5px;
-	margin-right: 5px;
+	margin-right: 10px;
+	margin-bottom: 10px;
+	margin-left: 10px;
 }
-#box6 {
+/*#box6 {
 	grid-row: 2;
 	grid-column: 5;
 	background-color: rgba(0,0,0,0);
 	color: white;
 	font-size: 30px;
-}
+}*/
 #box7 {
 	grid-row: 1;
 	grid-column: 5;
@@ -129,14 +136,15 @@ main .box {
 	grid-row: 5;
 	grid-column: 5;
 	/*border: 1px solid black;*/
-	border-radius: 60px;
+	border-radius: 40px;
 	background-color: #1F65F1;
 	opacity: 0;
 }
 
 .imgBox {
-	margin-left: 20px;
+	margin-right: 20px;
 	margin-bottom: 20px;
+	margin-left: 20px;
 }
 
 #img1 {
@@ -191,12 +199,12 @@ main .box {
 
 .start {
 	text-align: center;
-	font-size: 45px;
+	font-size: 40px;
 }
 
 .submit {
 	text-align: center;
-	font-size: 45px;
+	font-size: 40px;
 }
 
 .update {
@@ -210,7 +218,7 @@ main .box {
 
 .next {
 	text-align: center;
-	font-size: 45px;
+	font-size: 40px;
 }
 
 h2 {
