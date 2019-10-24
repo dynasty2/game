@@ -141,7 +141,7 @@ function answer(sel) { //sel?
 		case 5:
 			correctAnswer = answerBox[0]
 		default:
-			alert('round number exceeded question amount')
+			// alert('round number exceeded question amount')
 	}
 	// console.log("answer() was called AGAIN.")
 	console.log(sel);
@@ -187,11 +187,13 @@ function next() {
 	update.innerText = "";
 	round++;
 	if (round === 5) {
+		// remove event listener
 		end()
 	}
 }
 
 function end() {
+	// remove event listener option 2
 	questionContent.innerText = "Good work. Try again?"
 	option1.innerText = "";
 	option2.innerText = "";
