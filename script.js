@@ -14,9 +14,20 @@ const submitB = document.querySelector("#box9")
 const nextB = document.querySelector("#box10")
 const update  = document.querySelector(".update");
 const score = document.querySelector(".score")
+// const imgBox = document.querySelector("#box11")
+const imgLocation = document.querySelector("#box11")
+
 let scoreboard = 0;
 let selected;
 let correctAnswer;
+
+const imgTank = [
+"https://i.imgur.com/89CgC26.jpg",
+"https://i.imgur.com/t9ETDUV.jpg",
+"https://i.imgur.com/4t2Y5GL.jpg",
+"https://i.imgur.com/tCuEgR9.jpg",
+"https://i.imgur.com/mHC2AGy.jpg",
+]
 
 questionContent.innerText = "Paintball Trivia!"
 
@@ -108,8 +119,33 @@ submitB.addEventListener("click", function(evt) {
 	option2.innerText = "";
 	option3.innerText = "";
 	option4.innerText = "";
+		placePic()
 		whatHappened()
 })
+
+function placePic() {
+	console.log("placePic() was called.")
+	// for (let i = 0; i < imgTank.length; i++) {
+		switch (round) {
+		case 1:
+			img1.style.opacity = 1;
+			break;
+		case 2: 
+			img2.style.opacity = 1;
+			break;
+		case 3:
+			img3.style.opacity = 1; 
+			break;
+		case 4:
+			img4.style.opacity = 1;
+			break;
+		case 5:
+			img5.style.opacity = 1;
+		default:
+			
+		}
+	}
+// }
 
 function whatHappened() {
 	console.log("whatHappened() was called.")
@@ -181,16 +217,21 @@ function next() {
   box3.style.background = "rgb(236,55,55)";
   box4.style.background = "rgb(236,55,55)";
   box5.style.background = "rgb(236,55,55)";
-	questionContent.innerText = questions[round];
-	option1.innerText = answers[round][0];
-	option2.innerText = answers[round][1];
-	option3.innerText = answers[round][2];
-	option4.innerText = answers[round][3]; 
-	update.innerText = "";
-	round++;
-	if (round === 5) {
-		// remove event listener
-		end()
+	img1.style.opacity = 0;
+	img2.style.opacity = 0;
+	img3.style.opacity = 0; 
+	img4.style.opacity = 0;
+	img5.style.opacity = 0;
+		questionContent.innerText = questions[round];
+		option1.innerText = answers[round][0];
+		option2.innerText = answers[round][1];
+		option3.innerText = answers[round][2];
+		option4.innerText = answers[round][3]; 
+		update.innerText = "";
+		round++;
+			if (round === 5) {
+			// remove event listener
+			end()
 	}
 }
 
