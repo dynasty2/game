@@ -227,7 +227,7 @@ function next() {
 		option2.innerText = answers[round][1];
 		option3.innerText = answers[round][2];
 		option4.innerText = answers[round][3]; 
-		update.innerText = "";
+		// update.innerText = "";
 		round++;
 			if (round === 5) {
 			// remove event listener
