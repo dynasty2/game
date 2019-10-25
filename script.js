@@ -108,6 +108,10 @@ startB.addEventListener("click", function(evt) {
 })
 
 function startRound() { 
+	box2.style.opacity = 1;
+	box3.style.opacity = 1;
+	box4.style.opacity = 1;
+	box5.style.opacity = 1;
 	questionContent.innerText = questions[round];
 	option1.innerText = answers[round][0];
 	option2.innerText = answers[round][1];
@@ -266,6 +270,10 @@ function end() {
 	scoreboard = 0
 	score.innerText = "0"
 		startB.style.opacity = 1;
+					box2.style.opacity = 0;
+					box3.style.opacity = 0;
+					box4.style.opacity = 0;
+					box5.style.opacity = 0;
 		startB.addEventListener("click", function(evt) {
 			evt.preventDefault();
 			console.log(evt);
