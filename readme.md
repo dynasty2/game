@@ -14,6 +14,10 @@ Don't worry, if you answer correctly the game will congratulate you AND award po
 
 ___
 
+**Getting Started**
+
+First I sat down with pen and paper to plan out the ensuing process.  I needed a basic playing field to create and test the logic that would eventually drive the game.  I used grid as a base and flex-box to polish off the process of layout deisgn.  After creating a question/answer bank, I used Javascript to track right or wrong answers and move foward throughout gameplay.  Once I ironed out those wrinkles I used CSS to make the game more pleasing to the eye.  
+
 **Technology**      
 - HTML
 - CSS
