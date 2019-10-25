@@ -8,7 +8,7 @@ const option1 = document.querySelector("#option1");
 const option2 = document.querySelector("#option2");
 const option3 = document.querySelector("#option3");
 const option4 = document.querySelector("#option4");
-let round = 0; round < 6; 
+let round = 0; 
 const startB = document.querySelector("#box8")
 const submitB = document.querySelector("#box9")
 const nextB = document.querySelector("#box10")
@@ -36,7 +36,8 @@ const questions = ["Which professional National Xball League team won the 2015 W
 "Which team did Ollie Lang begin his professional career with?", 
 "What team was on the cover of the 2009 PlayStation 2 NPPL video game?", 
 "In what year did San Diego Dynasty and Edmonton Impact combine their rosters to create the team known as Dynapact?",
-"What is the most sold paintball marker of all time?"];
+"What is the most sold paintball marker of all time?",
+""];
 
 //Array for answers (wrong and right)
 const answers = [
@@ -44,7 +45,8 @@ const answers = [
 ["Los Angeles IronMen", "San Diego Dynasty", "Philly All-Americans", "Tampa-Bay Damage"],
 ["San Diego Dynasty", "Sacremento XSV", "Seattle Thunder", "Baltimore Revo"],
 ["2010", "2013", "2019", "2005"],
-["Tippmann 98-Custom", "Planet Eclipse Etek5", "Spyder Fenix", "Empire Axe"]
+["Tippmann 98-Custom", "Planet Eclipse Etek5", "Spyder Fenix", "Empire Axe"],
+[""]
 ]
 
 box2.addEventListener("click", function(evt) {
@@ -179,8 +181,11 @@ function answer(sel) { //sel?
 			break;
 		case 5:
 			correctAnswer = answerBox[0]
+			break;
+		// case 6:
+		// 	correctAnswer = answerBox[0]
 		default:
-			// alert('round number exceeded question amount')
+			console.log("rounds complete")
 	}
 	// console.log("answer() was called AGAIN.")
 	console.log(sel);
@@ -216,25 +221,27 @@ nextB.addEventListener("click", function(evt) {
 })
 
 function next() { 
-  box2.style.background = "rgb(236,55,55)";
-  box3.style.background = "rgb(236,55,55)";
-  box4.style.background = "rgb(236,55,55)";
-  box5.style.background = "rgb(236,55,55)";
+	box2.style.background = "rgb(236,55,55)";
+	box3.style.background = "rgb(236,55,55)";
+	box4.style.background = "rgb(236,55,55)";
+	box5.style.background = "rgb(236,55,55)";
 	img1.style.opacity = 0;
 	img2.style.opacity = 0;
 	img3.style.opacity = 0; 
 	img4.style.opacity = 0;
 	img5.style.opacity = 0;
-		questionContent.innerText = questions[round];
-		option1.innerText = answers[round][0];
-		option2.innerText = answers[round][1];
-		option3.innerText = answers[round][2];
-		option4.innerText = answers[round][3]; 
-		// update.innerText = "";
-		round++;
-			if (round === 5) {
-			// remove event listener
-			end()
+	questionContent.innerText = questions[round];
+	option1.innerText = answers[round][0];
+	option2.innerText = answers[round][1];
+	option3.innerText = answers[round][2];
+	option4.innerText = answers[round][3]; 
+	// update.innerText = "";
+	round++;
+	console.log(round);
+	if (round === 6) {
+		// remove event listener
+		console.log(round)
+		end()
 	}
 }
 

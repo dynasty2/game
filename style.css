@@ -239,7 +239,7 @@ main .box {
 	background-image: url(https://i.imgur.com/mHC2AGy.jpg);
 	background-size: contain;
 	background-position: center;
-	background-repeat: none;
+	background-repeat: no-repeat;
 	opacity: 0;
 }
 
