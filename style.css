@@ -9,7 +9,7 @@ body {
 }
 
 main {
-	background-color: rgba(0,0,0,.7);
+	background-color: rgba(0,0,0,.8);
 	backdrop-filter: blur(5px);
 	border-radius: 25px;
 	margin: 30px;
@@ -55,7 +55,7 @@ main .box {
 	flex-direction: column;
 	justify-content: space-between;
 	margin: 10px;
-	margin-top: 0;
+	margin-top: 15px;
 }
 
 #box2 {
@@ -126,14 +126,23 @@ main .box {
 	grid-column: 5;
 	background-color: rgba(0,0,0,0);
 	color: white;
-	font-size: 30px;
-	border: 1px solid white;
+	/*font-size: 30px;*/
+/*	border: 1px solid rgb(168,205,242);
 	border-top-right-radius: 25px;
-	border-bottom-left-radius: 25px;
+	border-bottom-left-radius: 25px;*/
 	/*background-image: url(https://i.imgur.com/f5wJsqt.png);
 	background-size: contain;
 	background-repeat: no-repeat;
 	background-position: left;*/
+	/*font-family: 'Raleway Dots', cursive;*/
+	font-family: 'Trade Winds', cursive;
+}
+
+#box7 h3 {
+	margin: 0;
+	font-size: 50px;
+	transform: translate(0, 45%); 
+
 }
 
 .actionContainer {
@@ -143,6 +152,7 @@ main .box {
 	flex-direction: row;
 	justify-content: space-around;
 	margin: 10px;
+	font-family: 'Trade Winds', cursive;
 }
 
 #box8 {
@@ -153,7 +163,8 @@ main .box {
 	/*border-right: 1px solid black;
 	border-bottom: 1px solid black;
 	border-left: 1px solid black;*/
-	background-color: #1F65F1;
+	/*background-color: #1F65F1;*/
+	background-color: rgb(168,205,242);
 	border-radius: 40px;
 	/*margin-top: 10px;
 	margin-bottom: 15px;*/
@@ -169,7 +180,8 @@ main .box {
 	border-right: 1px solid black;
 	border-bottom: 1px solid black;
 	border-left: 1px solid black;*/
-	background-color: #1F65F1;
+	/*background-color: #1F65F1;*/
+	background-color: rgb(168,205,242);
 	border-radius: 40px;
 /*	margin-top: 10px;
 	margin-bottom: 15px;*/
@@ -183,7 +195,8 @@ main .box {
 	height: 114px;
 	/*border: 1px solid black;*/
 	border-radius: 40px;
-	background-color: #1F65F1;
+	/*background-color: #1F65F1;*/
+	background-color: rgb(168,205,242);
 	/*margin-top: 10px;
 	margin-bottom: 15px;*/
 	opacity: 0;
@@ -272,14 +285,16 @@ main .box {
 h2 {
 	text-align: left;
 	font-size: 30px;
-	color: white;
+	color: rgb(168,205,242);
 	margin-top: 5px;
 	margin-bottom: 5px;
+	font-family: 'Trade Winds', cursive;
 }
 
 h4 {
 	text-align: center;
 	font-size: 25px;
+	font-family: 'Trade Winds', cursive;
 }
 /*#box9 {
 	grid-row: 4;
