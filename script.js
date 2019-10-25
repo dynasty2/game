@@ -29,7 +29,11 @@ const imgTank = [
 "https://i.imgur.com/mHC2AGy.jpg",
 ]
 
-questionContent.innerText = "Paintball Trivia!"
+questionContent.innerText = "";
+		box2.style.opacity = 0;
+		box3.style.opacity = 0;
+		box4.style.opacity = 0;
+		box5.style.opacity = 0;
 
 //Array for questions.
 const questions = ["Which professional National Xball League team won the 2015 World Cup?", 
@@ -95,6 +99,10 @@ startB.addEventListener("click", function(evt) {
 		console.log("You clicked Start.") //figure out how to change which start function to use
 		startRound() 
 		startB.style.opacity = 0;
+		box2.style.opacity = 1;
+		box3.style.opacity = 1;
+		box4.style.opacity = 1;
+		box5.style.opacity = 1;
 		// nextB.style.opacity = 1;
 		startB.removeEventListener("click", arguments.callee);
 })
