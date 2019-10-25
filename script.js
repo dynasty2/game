@@ -93,7 +93,7 @@ startB.addEventListener("click", function(evt) {
 		console.log("You clicked Start.") //figure out how to change which start function to use
 		startRound() 
 		startB.style.opacity = 0;
-		nextB.style.opacity = 1;
+		// nextB.style.opacity = 1;
 		startB.removeEventListener("click", arguments.callee);
 })
 
@@ -105,7 +105,6 @@ function startRound() {
 	option4.innerText = answers[round][3];
 	round++;
 	submitB.style.opacity = 1;
-	nextB.style.opacity = 1;
 	score.innerText = "0"
 }
 
@@ -119,6 +118,8 @@ submitB.addEventListener("click", function(evt) {
 	option2.innerText = "";
 	option3.innerText = "";
 	option4.innerText = "";
+	submitB.style.opacity = 0;
+	nextB.style.opacity = 1;
 		placePic()
 		whatHappened()
 })
@@ -206,6 +207,8 @@ nextB.addEventListener("click", function(evt) {
 		evt.preventDefault();
 		console.log(evt);
 		console.log("You clicked Next.")
+		nextB.style.opacity = 0;
+		submitB.style.opacity = 1;
 		next()
 		// if (round > 4) {
 		// 	nextB.removeEventListener("click", arguments.callee);

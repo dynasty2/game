@@ -40,6 +40,7 @@ main .box {
 }
 
 #box1 {
+	height: 120px;
 	grid-row: 1;
 	grid-column: 1 / span 4;
 	background-color: rgba(255,255,255,0);
@@ -54,12 +55,13 @@ main .box {
 	flex-direction: column;
 	justify-content: space-between;
 	margin: 10px;
+	margin-top: 0;
 }
 
 #box2 {
 	/*grid-row: 2;
 	grid-column: 1 / span 2;*/
-	height: 114px;
+	height: 110px;
 	/*border: 1px solid black;*/
 	border-radius: 40px;
 	background-color: rgba(236,55,55,1); /*red*/
@@ -70,7 +72,7 @@ main .box {
 #box3 {
 	/*grid-row: 3; 
 	grid-column: 1 / span 2;*/
-	height: 114px;
+	height: 110px;
 	/*border-top: 1px solid black;
 	border-right: 1px solid black;
 	border-bottom: 1px solid black;
@@ -85,7 +87,7 @@ main .box {
 #box4 {
 	/*grid-row: 4;
 	grid-column: 1 / span 2;*/
-	height: 114px;
+	height: 110px;
 /*	border-left: 1px solid black;
 	border-bottom: 1px solid black;
 	border-right: 1px solid black;
@@ -100,7 +102,7 @@ main .box {
 #box5 {
 /*	grid-row: 5;
 	grid-column: 1 / span 2;*/
-	height: 114px;
+	height: 110px;
 	/*border-right: 1px solid black;
 	border-bottom: 1px solid black;
 	border-top: 1px solid black;
@@ -128,6 +130,10 @@ main .box {
 	border: 1px solid white;
 	border-top-right-radius: 25px;
 	border-bottom-left-radius: 25px;
+	/*background-image: url(https://i.imgur.com/f5wJsqt.png);
+	background-size: contain;
+	background-repeat: no-repeat;
+	background-position: left;*/
 }
 
 .actionContainer {
@@ -267,7 +273,8 @@ h2 {
 	text-align: left;
 	font-size: 30px;
 	color: white;
-	/*transform: translate(0, 10%);*/
+	margin-top: 5px;
+	margin-bottom: 5px;
 }
 
 h4 {
