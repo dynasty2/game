@@ -125,6 +125,9 @@ main .box {
 	background-color: rgba(0,0,0,0);
 	color: white;
 	font-size: 30px;
+	border: 1px solid white;
+	border-top-right-radius: 25px;
+	border-bottom-left-radius: 25px;
 }
 
 .actionContainer {
@@ -181,9 +184,7 @@ main .box {
 }
 
 .imgBox {
-	margin-right: 20px;
-	margin-bottom: 20px;
-	margin-left: 20px;
+	margin: 20px;
 }
 
 #img1 {
