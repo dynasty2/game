@@ -14,9 +14,8 @@ const submitB = document.querySelector("#box9")
 const nextB = document.querySelector("#box10")
 const update  = document.querySelector(".update");
 const score = document.querySelector(".score")
-// const imgBox = document.querySelector("#box11")
 const imgLocation = document.querySelector("#box11")
-
+const main = document.querySelector("main")
 let scoreboard = 0;
 let selected;
 let correctAnswer;
@@ -96,14 +95,13 @@ box5.addEventListener("click", function(evt) {
 startB.addEventListener("click", function(evt) {
 		evt.preventDefault();
 		console.log(evt);
-		console.log("You clicked Start.") //figure out how to change which start function to use
+		console.log("You clicked Start.")
 		startRound() 
 		startB.style.opacity = 0;
 		box2.style.opacity = 1;
 		box3.style.opacity = 1;
 		box4.style.opacity = 1;
 		box5.style.opacity = 1;
-		// nextB.style.opacity = 1;
 		startB.removeEventListener("click", arguments.callee);
 })
 
@@ -126,7 +124,7 @@ function startRound() {
 submitB.addEventListener("click", function(evt) {
 		evt.preventDefault();
 		console.log(evt);
-		console.log("You clicked Submit.") //need to figure out how to grade answers
+		console.log("You clicked Submit.") 
 	questionContent.innerText = "";
 	option1.innerText = "";
 	option2.innerText = "";
@@ -140,7 +138,6 @@ submitB.addEventListener("click", function(evt) {
 
 function placePic() {
 	console.log("placePic() was called.")
-	// for (let i = 0; i < imgTank.length; i++) {
 		switch (round) {
 		case 1:
 			img1.style.opacity = 1;
@@ -160,7 +157,6 @@ function placePic() {
 			
 		}
 	}
-// }
 
 function whatHappened() {
 	console.log("whatHappened() was called.")
@@ -169,15 +165,11 @@ for (let i = 0; i < answerBox.length; i++) {
 		selected = answerBox[i];
 		}
 	}
-	//console.log(selected);
 	answer(selected)
 }
 
 function answer(sel) { //sel?
 	console.log("answer() was called.")
- // 	if (round === 1) {
-	// 	correctAnswer = answerBox[0]
-	// } 
 	switch (round) {
 		case 1:
 			correctAnswer = answerBox[0]
@@ -194,12 +186,9 @@ function answer(sel) { //sel?
 		case 5:
 			correctAnswer = answerBox[0]
 			break;
-		// case 6:
-		// 	correctAnswer = answerBox[0]
 		default:
 			console.log("rounds complete")
 	}
-	// console.log("answer() was called AGAIN.")
 	console.log(sel);
 	console.log(correctAnswer);
 	grade(sel, correctAnswer)
@@ -214,7 +203,7 @@ function grade(s, cA) {
   } else {
     	questionContent.innerText = ("Wrong :(")
   }
-  		box2.style.background = "rgb(236,55,55)"; //checking to see if these work here.
+  		box2.style.background = "rgb(236,55,55)"; 
 		box3.style.background = "rgb(236,55,55)";
 		box4.style.background = "rgb(236,55,55)";
 		box5.style.background = "rgb(236,55,55)";
@@ -227,9 +216,6 @@ nextB.addEventListener("click", function(evt) {
 		nextB.style.opacity = 0;
 		submitB.style.opacity = 1;
 		next()
-		// if (round > 4) {
-		// 	nextB.removeEventListener("click", arguments.callee);
-		// }
 })
 
 function next() { 
@@ -247,18 +233,15 @@ function next() {
 	option2.innerText = answers[round][1];
 	option3.innerText = answers[round][2];
 	option4.innerText = answers[round][3]; 
-	// update.innerText = "";
 	round++;
 	console.log(round);
 	if (round === 6) {
-		// remove event listener
 		console.log(round)
 		end()
 	}
 }
 
 function end() {
-	// remove event listener option 2
 	questionContent.innerText = "Good work. Try again?"
 	option1.innerText = "";
 	option2.innerText = "";
@@ -270,14 +253,14 @@ function end() {
 	scoreboard = 0
 	score.innerText = "0"
 		startB.style.opacity = 1;
-					box2.style.opacity = 0;
-					box3.style.opacity = 0;
-					box4.style.opacity = 0;
-					box5.style.opacity = 0;
+		box2.style.opacity = 0;
+		box3.style.opacity = 0;
+		box4.style.opacity = 0;
+		box5.style.opacity = 0;
 		startB.addEventListener("click", function(evt) {
 			evt.preventDefault();
 			console.log(evt);
-			console.log("You clicked Start.") //figure out how to change which start function to use
+			console.log("You clicked Start.")
 			startRound() 
 			startB.removeEventListener("click", arguments.callee);
 			startB.style.opacity = 0;
