@@ -4,6 +4,8 @@ Who doesn't love games? Throughout week four of General Assembly's Software Engi
 
 **Example** 
 
+https://dynasty2.github.io/game/
+
 Paintball Trivia runs smoothly and directs the user via clickable prompts througout the experince.  
 
 ![Paintball Trivia](https://i.imgur.com/d1uGv9J.png "Paintball Trivia")
